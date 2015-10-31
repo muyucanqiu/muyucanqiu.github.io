@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>百度一下，你就知道</title>
+<style>
+*{margin:0;padding:0;}
+#div1{height:100px;width:100px;background:red;position:absolute;left:0;top:0;}
+</style>
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById('div1');
+	var iSpeedX=0;
+	var iSpeedY=0;
+	var top=0;
+	var left=0;
+	var timer=null;
+	var lastX=0;
+	var lastY=0;
+	Drag(oDiv);
+
+	function Drag(obj){
+		obj.onmousedown=function(ev){
+			var oEvent=ev || event;
+			var disX=oEvent.clientX-obj.offsetLeft;
+			var disY=oEvent.clientY-obj.offsetTop;
+
+			clearInterval(timer);
+			document.onmousemove=function(ev){
+				var oEvent=ev || event;
+				var left=oEvent.clientX-disX;
+				var top=oEvent.clientY-disY;
+
+				if(left<=0){
+					left=0
+				}
+				if(left>=document.documentElement.clientWidth-obj.offsetWidth){
+					left=document.documentElement.clientWidth-obj.offsetWidth;
+				}
+				if(top<=0){
+					top=0;
+				}
+				if(top>=document.documentElement.clientHeight-obj.offsetHeight){
+					top=document.documentElement.clientHeight-obj.offsetHeight;
+				}
+
+				obj.style.left=left+'px';
+				obj.style.top=top+'px';
+
+				iSpeedX=oEvent.clientX-lastX;
+				iSpeedY=oEvent.clientY-lastY;
+
+				lastX=oEvent.clientX;
+				lastY=oEvent.clientY;
+
+				
+			}
+
+			document.onmouseup=function(){
+				document.onmousemove=null;
+				document.onmouseup=null;
+				obj.releaseCapture && obj.releaseCapture();
+
+				move(obj);
+			}
+			obj.setCapture && obj.setCapture();
+			return false;
+		}
+	}
+	
+	function move(obj){
+		obj.onclick=function(){
+			clearInterval(timer);
+			timer=setInterval(function(){
+				iSpeedY+=3;
+				left=oDiv.offsetLeft+iSpeedX;
+				top=oDiv.offsetTop+iSpeedY;
+
+				if(top>=document.documentElement.clientHeight-obj.offsetHeight){
+					top=document.documentElement.clientHeight-obj.offsetHeight;
+					iSpeedY*=-0.9;
+					iSpeedX*=0.9;
+				}
+				if(top<=0){
+					iSpeedY*=-0.9;
+					iSpeedX*=0.9;
+					top=0;
+				}
+				if(left>=document.documentElement.clientWidth-oDiv.offsetWidth){
+					left=document.documentElement.clientWidth-oDiv.offsetWidth
+					iSpeedX*=-0.9;
+					iSpeedY*=0.9;
+				}
+				if(left<=0){
+					left=0;
+					iSpeedX*=-0.9;
+					iSpeedY*=0.9;
+				}
+				obj.style.left=left+'px';
+				obj.style.top=top+'px';
+
+				if(Math.abs(iSpeedX)<1){
+					iSpeedX=0;
+				}
+				if(Math.abs(iSpeedY)<1){
+					iSpeedY=0;
+				}
+
+				if(top==document.documentElement.clientHeight-oDiv.offsetHeight && iSpeedX==0 && iSpeedY==0){
+					clearInterval(timer)
+				}
+			},30)	
+		}
+	}	
+}
+</script>
+</head>
+
+<body>
+	<div id="div1"></div>
+</body>
+</html>
