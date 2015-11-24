@@ -1,0 +1,70 @@
+@keyframes move{
+	to{ left:-1082px;}	
+}
+@keyframes moves{
+	to{ left:0;}	
+}
+
+.css .wram .top{animation:20s move linear infinite;}
+.css .wram .top:hover{ animation-play-state:paused;}
+
+.css .wram .bottom{animation:20s moves linear infinite;}
+.css .wram .bottom:hover{ animation-play-state:paused;}
+
+#contact:hover{ -webkit-animation-play-state:paused;}
+
+*{margin:0;padding:0;list-style:none;}
+body{color:#fff;background:linear-gradient(#999,#000);}
+a{text-decoration: none;color:#fff;}
+
+#box{height:665px;width:100%;position:relative;overflow: hidden}
+.nav{height:515px;width:150px;padding-top:150px;}
+#main{height:665px;width:calc(100% - 150px);position:absolute;left:150px;top:0;transition:.5s all cubic-bezier(0.74,-0.27, 0.51, 1.82);}
+
+.nav ul{height:510px;width:150px;}
+.nav .phone{height:50px;width:1000px;position:absolute;left:250px;bottom:-50px;}
+.nav .phone div{float:left;width:450px;height:50px;line-height: 50px;text-align: center;font-size: 40px;text-shadow:1px 1px 3px black;box-shadow:1px 1px 5px #fff;font-style:italic;margin-left:20px; position:absolute;top:0;transition:1s all ease;z-index:10;}
+#email{transition:1s .5s all ease;}
+.nav ul li{height:50px;margin-top:5px;line-height: 50px;text-align: center;font-size: 30px;border:1px solid black;border-radius: 8px;text-shadow:1px 1px 3px black;box-shadow:1px 1px 5px #fff;}
+#contact{height:150px;width:150px;color:#fff;position:absolute;left:0;bottom:50px;font-size: 40px;border:1px solid#fff;border-radius: 50%;line-height: 150px;text-align: center;text-shadow:1px 1px 3px black;box-shadow:1px 1px 5px #fff;}
+
+.box{height:665px;width:100%;font-size:50px;}
+.hover{transform:rotate(-375deg);transition:.3s all ease;cursor: pointer;}
+
+.main .mv{height:398px;width:960px;position:absolute;top:120px;left:100px;box-shadow:1px 1px 5px 5px #fff;}
+.main video{position:absolute;left:0;top:0;}
+
+.css .wram{height:500px;width:1082px;margin-left:50px;overflow: hidden;position: relative;top:50px;box-shadow:1px 1px 5px 5px #000;}
+.css .wram .top{height:150px;width:200%;background: url(../images/movie.png) repeat-x;position:absolute;left:0;top:0;}
+.css .wram .top li{height:110px;float:left;margin:19px 0;border-left:1px solid #fff;}
+.css .wram .top li img{height:100%;}
+.css .wram .middle{height:200px;width:100%;position:absolute;top:150px;left:0;}
+
+.css .wram .middle .left{height:200px;float:left;width:273px;}
+.css .wram .middle .center{height:200px;width:536px;float:left;text-align: center;line-height: 200px;font-size:200px;font-style: italic;color:#000;text-shadow:1px 1px 10px #fff;}
+.css .wram .middle .right{height:200px;float:right;width:273px}
+.css .wram .bottom{height:150px;width:calc(200% + 6px);background: url(../images/movie.png) repeat-x;position:absolute;left:-1082px;top:350px;}
+.css .wram .bottom li{height:110px;float:left;margin:19px 0;border-left:1px solid #fff;}
+.css .wram .bottom li img{height:100%;}
+
+.js .main{height:652px;width:1024px;margin-left:80px;margin-top:5px;box-shadow: 1px 1px 5px 5px #000;position:relative;}
+.js .top{background: url(../images/jsbackground.png) no-repeat;height:326px;width:1024px;}
+.js .top ul li{height:205px;width:205px;position:absolute;text-align: center;line-height: 180px;font-size: 160px;overflow: hidden;}
+.js .top ul li:nth-child(1){left:45px;top:98px;transform:rotate(3deg);}
+.js .top ul li:nth-child(2){left:296px;top:108px;transform:rotate(-1deg);}
+.js .top ul li:nth-child(3){left:544px;top:112px;transform:rotate(4deg);}
+.js .top ul li:nth-child(4){left:790px;top:98px;transform:rotate(-2deg);}
+.js .top ul li .text{height:80px;width:100%;text-align: center;line-height: 80px;background: rgba(0,0,0,.5);position:absolute;bottom:-80px;left:0;transition:.5s all ease;font-size: 45px ;color:#fff;font-size: 30px}
+.js .bottom{background: url(../images/jsbackground.png) no-repeat;height:326px;width:1024px;}
+.js .bottom ul li{height:205px;width:205px;position:absolute;text-align: center;line-height: 180px;font-size: 160px;overflow: hidden;}
+.js .bottom ul li:nth-child(1){left:45px;top:424px;transform:rotate(3deg);}
+.js .bottom ul li:nth-child(2){left:296px;top:434px;transform:rotate(-1deg);}
+.js .bottom ul li:nth-child(3){left:544px;top:438px;transform:rotate(4deg);}
+.js .bottom ul li:nth-child(4){left:790px;top:424px;transform:rotate(-2deg);}
+.js .bottom ul li .text{height:80px;width:100%;text-align: center;line-height: 80px;background: rgba(0,0,0,.5);position:absolute;bottom:-80px;left:0;transition:.5s all ease;font-size: 45px ;color:#fff;font-size: 30px}
+
+.h5 ul{height:100%;width:100%;}
+.h5 ul li{height:calc(50% - 40px);width:500px;float:left;margin-top:30px;margin-left:60px;border-radius: 8px;overflow: hidden;position:relative;box-shadow:1px 1px 5px 5px #fff;}
+.h5 ul li img{width:100%;}
+.h5 .gulp{text-align: center;line-height:300px;color:#fff;background:#000;font-size: 150px ;}
+.h5 ul li .text{height:100px;width:100%;text-align: center;line-height: 100px;background: rgba(0,0,0,.5);position:absolute;bottom:-100px;left:0;transition:.5s all ease;font-size: 50px ;color:#fff;}
