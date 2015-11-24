@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>沐浴残秋</title>
+<style>
+* { margin:0; padding:0; }
+div { overflow:hidden; width:966px; }
+ul { float:left; width:300px; border:1px solid red; margin:10px; }
+li { background:#ccc; margin:10px 0; list-style:none; font-size:50px; font-weight:bold; text-align:center; }
+#page { height:100px; background:yellow; display:none; }
+</style>
+<script>
+window.onload=function (){
+	// 红 蓝 黄 灰 绿
+	var aColor=['red', 'blue', 'yellow', '#ccc', 'green'];
+	var oPage=document.getElementById('page');
+	var aTmp=document.getElementsByTagName('ul');
+	var aUl=[];
+	for (var i=0; i<aTmp.length; i++)
+	{
+		aUl.push(aTmp[i]);
+	}
+	var n=0;
+	
+	createLi();
+	
+	window.onscroll=function (){
+		var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+		var clientHeight=document.documentElement.clientHeight;
+		var h=clientHeight+scrollTop;
+		
+		if (document.body.offsetHeight-100 <= h)
+		{
+			createLi();
+		}
+	};
+	
+	function createLi()
+	{
+		n++;
+		
+		if (n >= 6)
+		{
+			oPage.style.display='block';
+			return false;
+		}
+		
+		// 模拟加载
+		for (var i=0; i<20; i++)
+		{
+			var oLi=document.createElement('li');
+			
+			// 模拟
+			oLi.innerHTML=i;
+			oLi.style.background=aColor[n-1];
+			oLi.style.height=rnd(100, 300)+'px';
+			
+			// 插入
+			aUl.sort(function (ul1, ul2){
+				return ul1.offsetHeight-ul2.offsetHeight;
+			});
+			
+			aUl[0].appendChild(oLi);
+		}
+	}
+};
+
+function rnd(n, m)
+{
+	return Math.floor(Math.random()*(m-n)+n);
+}
+</script>
+</head>
+
+<body>
+	<div>
+		<ul></ul>
+		<ul></ul>
+		<ul></ul>
+	</div>
+	<div id="page"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

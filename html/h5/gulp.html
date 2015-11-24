@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>沐浴残秋</title>
+<style>
+*{margin:0;padding:0;list-style: none;}
+a{text-decoration: none;color:#fff;}
+.nav{height:50px;width:100%;background:#cf4646;color:#fff;display: -webkit-box;position: fixed;top:0;}
+.nav>div{-webkit-box-flex:1;}
+.nav .title{height:50px;line-height:50px;padding-left:100px;font-size:20px;font-weight: bolder;}
+.nav .list{height:50px;width:300px;padding-right:100px;}
+.nav .list ul{width:100%;display:-webkit-box;height:100%;}
+.nav .list li{-webkit-box-flex:1;height:50px;text-align:center;line-height:50px;}
+
+.main .title{height:400px;width:100%;background:#cf4646;}
+.main .title .top{height:300px;width:375px;margin:0 auto;padding-top:100px;}
+.main .title .top .start{height:30px;width:100px;border:2px solid #fff;border-radius: 5px;margin:0 auto;color:#fff;text-align:center;line-height: 30px}
+
+.main .content ul{width:calc(100% - 60px);height:220px;padding:80px 30px;}
+.main .content .change{height:150px;width:calc(50% - 30px);float:left;margin-left:30px;}
+.main .content ul li h3{font-size: 35px;height:60px;line-height: 60px;font-family: 宋体}
+.main .content ul li p{font-size: 22px;font-family: 楷体}
+
+.footer{height:70px;width:100%;text-align: center;padding-top:30px;color:#aaa;font-weight: bolder;float:left;font-size: 14px}
+.footer p{margin-top:10px;}
+
+.menu{display:none;position:absolute;right:20px;top:10px;}
+@media(max-width:900px){
+	.list{display:none;}
+}
+@media(max-width:900px){
+	.menu{display:block;}
+}
+@media(max-width:1000px){
+	.main .content .change{clear:both;}
+}
+@media(max-width:1000px){
+	.main .content .change{width:90%;}
+}
+</style>
+<script>
+
+</script>
+</head>
+
+<body>
+<div id="wrap">
+	<div class="nav">
+		<div class="title">
+			Gulp中文网
+		</div>
+		<div class="menu">
+			<img src="images/gulp1.jpg">
+		</div>
+		<div class="list">
+			<ul>
+				<li>首页</li>
+				<li>中文文档</li>
+				<li>入门指南</li>
+				<li>API</li>
+				<li>插件开发</li>
+				<li>常见问题</li>
+				<li>使用技巧</li>
+			</ul>
+		</div>
+	</div>
+	<div class="main">
+		<div class="title">
+			<div class="top">
+				<img src="images/gulp2.png">
+				<div class="start"><a href="http://www.baidu.com">开始使用</a></div>
+			</div>
+		</div>
+		<div class="content">
+			<ul>
+				<li class="change">
+					<h3>易于使用</h3>
+					<p>通过代码优于配置的策略，Gulp 让简单的任务简单，复杂的任务可管理。
+					</p>
+				</li>
+				<li class="change">
+					<h3>构建快速</h3>
+					<p>
+						利用 Node.js 流的威力，你可以快速构建项目并减少频繁的 IO 操作。
+					</p>
+				</li>
+				<li class="change">
+					<h3>插件高质</h3>
+					<p>Gulp 严格的插件指南确保插件如你期望的那样简洁高质得工作。
+					</p>
+				</li>
+				<li class="change">
+					<h3>易于学习</h3>
+					<p>通过最少的 API，掌握 Gulp 毫不费力，构建工作尽在掌握：如同一系列流管道。
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<p>&copy Gulp 中文网 2015</p>
+		<p>京ICP备11008151号 | 京公网安备11010802014853</p>
+	</div>
+</div>
+</body>
+</html>

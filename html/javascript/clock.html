@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com">
+<meta name="copyright" content="智能社 - zhinengshe.com">
+<title>沐浴残秋</title>
+<script>
+window.onload=function (){
+	tick();//进入的第一秒就显示
+	setInterval(tick, 1000);
+	
+	
+	function tick()
+	{
+		var oDate=new Date();
+		var year=oDate.getFullYear();
+		var month=oDate.getMonth();
+		var date=oDate.getDate();
+		var h=oDate.getHours();
+		var m=oDate.getMinutes();
+		var s=oDate.getSeconds();
+		
+		var str=year+toDub(month+1)+toDub(date)+toDub(h)+toDub(m)+toDub(s);
+		
+		var aImg=document.getElementsByTagName('img');
+		
+		for (var i=0; i<aImg.length; i++)
+		{
+			aImg[i].src='images/'+str.charAt(i)+'.png';
+		}
+	}
+	
+	
+	function toDub(n)
+	{
+		return n<10 ? '0'+n : ''+n;
+	}
+};
+</script>
+</head>
+
+<body style="background:#000; text-align:center; padding-top:100px; font-size:50px; color:#fff; font-weight:bold;">
+	<img src="images/2.png" />
+	<img src="images/0.png" />
+	<img src="images/1.png" />
+	<img src="images/5.png" />
+	-
+	<img src="images/0.png" />
+	<img src="images/8.png" />
+	-
+	<img src="images/2.png" />
+	<img src="images/0.png" />
+	<br />
+	<img src="images/0.png" />
+	<img src="images/0.png" />
+	:
+	<img src="images/0.png" />
+	<img src="images/0.png" />
+	:
+	<img src="images/0.png" />
+	<img src="images/0.png" />
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
