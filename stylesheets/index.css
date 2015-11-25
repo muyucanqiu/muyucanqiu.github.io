@@ -64,7 +64,7 @@ a{text-decoration: none;color:#fff;}
 .js .bottom ul li .text{height:80px;width:100%;text-align: center;line-height: 80px;background: rgba(0,0,0,.5);position:absolute;bottom:-80px;left:0;transition:.5s all ease;font-size: 45px ;color:#fff;font-size: 30px}
 
 .h5 ul{height:100%;width:100%;}
-.h5 ul li{height:calc(50% - 40px);width:500px;float:left;margin-top:30px;margin-left:60px;border-radius: 8px;overflow: hidden;position:relative;box-shadow:1px 1px 5px 5px #fff;}
+.h5 ul li{transition:1s all ease;height:calc(50% - 40px);width:500px;float:left;margin-top:30px;margin-left:60px;border-radius: 8px;overflow: hidden;position:relative;box-shadow:1px 1px 5px 5px #fff;}
 .h5 ul li img{width:100%;}
 .h5 .gulp{text-align: center;line-height:300px;color:#fff;background:#000;font-size: 150px ;}
 .h5 ul li .text{height:100px;width:100%;text-align: center;line-height: 100px;background: rgba(0,0,0,.5);position:absolute;bottom:-100px;left:0;transition:.5s all ease;font-size: 50px ;color:#fff;}
