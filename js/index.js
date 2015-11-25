@@ -104,6 +104,7 @@ ready(function(){
 		for(var i=0;i<aLi.length;i++){
 			aLi[i].index=i;
 			aLi[i].onmouseover=function(){
+				this.style.transform='rotateY(360deg)';
 				aText[this.index].style.bottom=0;
 			}
 			aLi[i].onmouseout=function(){
