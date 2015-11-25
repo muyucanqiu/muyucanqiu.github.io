@@ -84,3 +84,13 @@ function getByClass(oParent, sName)
 		return aRes;
 	}	
 }
+
+function findInArr(aTmp,sName){
+	for(var i=0;i<aTmp.length;i++){
+		if(aTmp[i]==sName){
+			return true;
+		}
+		return false;
+	}
+
+}
